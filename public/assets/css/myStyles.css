@@ -831,13 +831,13 @@ about
 ---------------------------------------------
 */
 
-#about {
+#about,#skills-learnt,#contact-us,#about2,#about3{
   padding: 120px 0px;
   border-bottom: 1px solid #eee;
 }
 
 @media (max-width: 765px) {
-  #about {
+  #about,#skills-learnt,#contact-us {
     padding: 20px 0px 120px 0px;
   }
 }
@@ -850,16 +850,14 @@ about
   margin-bottom: 40px;
 }
 
-#about2 {
-  padding: 120px 0px;
-}
 
 #about2 .right-image {
   align-self: center;
 }
 
 #about h5,
-#about2 h5 {
+#about2 h5,
+#skills-learnt h5 {
   font-size: 26px;
   font-weight: 700;
   color: #1e1e1e;
@@ -869,7 +867,8 @@ about
 }
 
 #about p,
-#about2 p {
+#about2 p,
+#skills-learnt p {
   margin-bottom: 30px;
   font-size: 16px;
   line-height: 30px;
@@ -987,7 +986,7 @@ about3
 }
 
 .service-item .icon img {
-  max-width: 50px;
+  max-width: 100px;
   position: absolute;
   top: 50%;
   left: 50%;

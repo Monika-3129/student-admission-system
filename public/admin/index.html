@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin Login</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <!--/Style-CSS -->
+    <link rel="stylesheet" href="aLogin.css" type="text/css" media="all" />
+
+</head>
+
+<body>
+
+    <!-- form section start -->
+    <section class="workinghny-form">
+        <!-- form  start-->
+        <div class="workinghny-form-grid">
+            <div class="wrapper">
+                <div class="logo">
+                    <h1><a class="brand-logo" href="#"><span>Admission System</span> Admin Login</a></h1>
+                </div>
+                <div class="workinghny-block-grid">
+                    <div class="workinghny-left-img align-end">
+                        <img src="1.png" class="img-responsive" alt="img" />
+                    </div>
+                    <div class="form-right-inf">
+
+                        <div class="login-form-content">
+
+                            <form class="signin-form" id="signin-form">
+                                <div class="one-frm">
+                                    <label>Email</label>
+                                    <input type="email" name="Email" id="aEmail" placeholder="Your Email" required>
+                                </div>
+                                <div class="one-frm">
+                                    <label>Password</label>
+                                    <input type="password" name="Password" id="aPassword" placeholder="Your Password"
+                                        required>
+                                </div>
+                                <button class="btn btn-style mt-3" type="submit" id="login-submit">Sign In </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- form end  -->
+
+    </section>
+    <!-- //form section end -->
+    <hr width="40%">
+    <p align="center"><a href="../">Back to Homepage</a></p>
+    <hr width="50%"><br>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="../config.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>
