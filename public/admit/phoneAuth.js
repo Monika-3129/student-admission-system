@@ -5,7 +5,7 @@ window.onload = function () {
                 onSignOutClick();
             else{
                 //onSignOutClick();
-                window.location.replace("admForm.html");
+                window.location.replace("dash.html");
             }
         }
         else {

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GTC Admission Form</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/form-elements.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/media-queries.css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+	<!-- Favicon and touch icons -->
+	<link rel="shortcut icon" href="assets/ico/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+	<script src="assets/js/opt.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Top menu -->
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+					data-target="#top-navbar-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../">Admission Form</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="top-navbar-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<span class="li-text" id="phone-logged">
+							+91 9990556075
+						</span>
+						<span class="li-social">
+							<a href="#"><i class="fa fa-user"></i></a>
+							<a href="#"><i class="fa fa-sign-out" onclick="signOut()"></i></a>
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Description -->
+	<div class="description-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 description-title">
+					<h2>Multi-Step Admission Form</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 description-text">
+					<p>
+						This form is mandatory to be filled and please ensure to fill <b>meaningfull</b> data only
+					</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Multi Step Form -->
+	<div class="msf-container">
+		<div class="container">
+
+			<div class="row" id="frmRow" style="display: block;">
+				<div class="col-sm-12 msf-form">
+					<form role="form" id="admission" class="form-inline">
+
+						<fieldset>
+							<h4>Introduction <span class="step">(Step 1 / 3)</span></h4>
+							<div class="form-group">
+								<label for="full-name">Full Name:</label><br>
+								<input type="text" name="full-name" class="full-name form-control" id="name">
+							</div>
+							<div class="form-group">
+								<label for="father-name">Father's Name:</label><br>
+								<input type="text" name="father-name" class="father-name form-control" id="father">
+							</div>
+							<div class="form-group">
+								<label for="email">Email:</label><br>
+								<input type="text" name="email" class="email form-control" id="email">
+							</div>
+							<div class="form-group">
+								<label for="birth-date">Date of Birth:</label><br>
+								<input type="date" name="birth-date" class="birth-date form-control" id="dob">
+							</div>
+
+							<br>
+							<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+						</fieldset>
+
+
+						<fieldset>
+							<h4>Address and Contact Information <span class="step">(Step 2 / 3)</span></h4>
+							<div class="form-group">
+								<label for="address">Address:</label><br>
+								<input type="text" name="address" class="address form-control" id="address">
+							</div>
+							<div class="form-group">
+								<label for="address-city">City:</label><br>
+								<input type="text" name="address-city" class="address-city form-control" id="city">
+							</div>
+							<div class="form-group">
+								<label for="address-postal-code">Postal Code:</label><br>
+								<input type="text" name="address-postal-code" class="address-postal-code form-control"
+									id="postal-code">
+							</div>
+							<div class="form-group">
+								<label for="telephone">Telephone:</label><br>
+								<input type="text" name="telephone" class="telephone form-control" id="telephone">
+							</div>
+							<div class="form-group">
+								<label for="select-1">State:</label><br>
+								<select name="select-1" id="state" class="form-control">
+									<option value="Andhra Pradesh">Andhra Pradesh</option>
+									<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+									<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+									<option value="Assam">Assam</option>
+									<option value="Bihar">Bihar</option>
+									<option value="Chandigarh">Chandigarh</option>
+									<option value="Chhattisgarh">Chhattisgarh</option>
+									<option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+									<option value="Daman and Diu">Daman and Diu</option>
+									<option value="Delhi" selected>Delhi</option>
+									<option value="Lakshadweep">Lakshadweep</option>
+									<option value="Puducherry">Puducherry</option>
+									<option value="Goa">Goa</option>
+									<option value="Gujarat">Gujarat</option>
+									<option value="Haryana">Haryana</option>
+									<option value="Himachal Pradesh">Himachal Pradesh</option>
+									<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+									<option value="Jharkhand">Jharkhand</option>
+									<option value="Karnataka">Karnataka</option>
+									<option value="Kerala">Kerala</option>
+									<option value="Ladakh">Ladakh</option>
+									<option value="Madhya Pradesh">Madhya Pradesh</option>
+									<option value="Maharashtra">Maharashtra</option>
+									<option value="Manipur">Manipur</option>
+									<option value="Meghalaya">Meghalaya</option>
+									<option value="Mizoram">Mizoram</option>
+									<option value="Nagaland">Nagaland</option>
+									<option value="Odisha">Odisha</option>
+									<option value="Punjab">Punjab</option>
+									<option value="Rajasthan">Rajasthan</option>
+									<option value="Sikkim">Sikkim</option>
+									<option value="Tamil Nadu">Tamil Nadu</option>
+									<option value="Telangana">Telangana</option>
+									<option value="Tripura">Tripura</option>
+									<option value="Uttar Pradesh">Uttar Pradesh</option>
+									<option value="Uttarakhand">Uttarakhand</option>
+									<option value="West Bengal">West Bengal</option>
+								</select>
+
+							</div>
+
+							<div class="form-group">
+								<label for="address-country">Country:</label><br>
+								<input type="text" name="address-country" class="address-country form-control"
+									id="country">
+							</div>
+
+
+							<br>
+							<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i>
+								Previous</button>
+							<button type="button" class="btn btn-next">Next <i class="fa fa-angle-right"></i></button>
+						</fieldset>
+
+
+
+						<fieldset>
+							<h4>Campus Preferences <span class="step">(Step 3 / 3)</span></h4>
+
+							<div class="form-group">
+								<label for="departmentn">Course Applying for *</label><br>
+								<select id="departmentn" name="departmentn" onchange="populate4(this.id,'program')"
+									class="form-control" required>
+									<option selected disabled>--Select--</option>
+									<option value="Engineering">Engineering</option>
+									<option value="Diploma">Diploma in Engineering</option>
+									<option value="MBA">MBA</option>
+									<option value="BBA">BBA</option>
+									<option value="BCA">BCA</option>
+									<option value="Vocational">B.Vocational</option>
+								</select>
+							</div>
+							<div class=" form-group">
+								<label for="program">Select Desired Program *</label><br>
+								<select id="program" name="program" onchange="populate(this.id,'stream')"
+									class="form-control" required>
+									<option disabled>--Select Course First--</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label>Select Desired Stream *</label><br>
+								<select id="stream" name="stream" class="form-control">
+									<option disabled>--Select Program First--</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label>Do you need Hostel Accomodation ? *</label><br>
+								<select id="hostel" name="hostel" onchange="populate3(this.id,'transp')"
+									class="form-control" required>
+									<option selected disabled>--Select--</option>
+									<option value="no">NO</option>
+									<option value="yes">YES</option>
+
+								</select>
+							</div>
+							<div class="form-group">
+								<label>Do you need Transportation ? *</label><br>
+								<select id="transp" name="transp" onchange="populate2(this.id,'route')"
+									class="form-control" required>
+									<option disabled>--Select Choice Of Hostel First--</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label>Select the source of Bus</label><br>
+								<select id="route" name="route" class="form-control">
+									<option disabled>--Select Choice Of Transport First--</option>
+
+								</select>
+							</div>
+
+							<br>
+							<button type="button" class="btn btn-previous"><i class="fa fa-angle-left"></i>
+								Previous</button>
+							<button type="submit" class="btn">Submit</button>
+						</fieldset>
+
+					</form>
+				</div>
+			</div>
+			<div class="row" id="dataRow" style="display: none;">
+			<p>You have submitted your admission form<br>You can view the details below</p>
+			
+			<p id= "filled-form"></p>
+
+			<p>More details will be added soon</p>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<!-- Javascript -->
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+	<script src="../config.js"></script>
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.backstretch.min.js"></script>
+	<script src="assets/js/scripts.js"></script>
+
+	<!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+</body>
+
+</html>

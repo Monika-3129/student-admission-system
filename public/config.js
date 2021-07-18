@@ -11,7 +11,6 @@ firebase.analytics();
 //firebase db init
 var db = firebase.firestore();
 
-
 // Function to get get form values
 function getInputVal(id) {
     return document.getElementById(id).value;
