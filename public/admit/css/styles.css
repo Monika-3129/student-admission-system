@@ -1,0 +1,269 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+body.modal-open {
+    overflow-y: hidden;
+    position: fixed;
+}
+
+tr {
+    background: rgb(123, 173, 231);
+    color: white;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #ffe100;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 100%;
+    border: 1px solid #c9e6ff;
+}
+
+button:hover,
+button:focus {
+    background: #92bde7;
+    color: rgb(95, 76, 76);
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
+
+.form-control {
+    height: 55px;
+    border: 1px solid rgba(156, 33, 33, 0.4);
+    background: none;
+    border-radius: 10px;
+    width: 100%;
+    background: rgba(214, 224, 154, 0.2);
+    line-height: 1;
+}
+
+.modal {
+    width: 300px;
+    padding: 10px;
+    line-height: 0;
+    margin: 100px auto;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.new-request {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    display: none;
+}
+
+.new-request.open {
+    display: block;
+}
+
+.auth {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #fafafa;
+    display: none;
+    z-index: 1;
+}
+
+.auth.open {
+    display: block;
+}
+
+.auth a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.auth .modal {
+    display: none;
+}
+
+.auth .modal.active {
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: rgb(95, 76, 76);
+}
+
+body {
+    background: #92bde7;
+    color: #485e74;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 2000px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.brand {
+    text-align: center;
+}
+
+.brand span {
+    color: #fff;
+}
+
+.wrapper {
+    box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+}
+
+.wrapper>* {
+    padding: 1em;
+}
+
+.info {
+    background: #c9e6ff;
+}
+
+.info h3,
+.info ul {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.info p {
+    margin: 0;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    border-bottom: 2px solid #ffe100;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.info a:hover {
+    background: #ffe100;
+    color: black;
+    border: 2px solid #133a04;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.info button {
+    background: #157561;
+    border: 0;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #c9e6ff;
+}
+
+.info button:hover,
+.info button:focus {
+    background: #6d7f91;
+    color: #fff;
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
+
+.admit {
+    background: #f9feff;
+    display: block;
+    /*exp 1*/
+}
+
+
+/* FORM STYLES */
+
+.admit form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.admit form label {
+    display: block;
+}
+
+.admit form p {
+    margin: 0;
+}
+
+.admit form .full {
+    grid-column: 1 / 3;
+}
+
+.admit form button,
+.admit form input,
+.admit form textarea,
+.admit form select {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #c9e6ff;
+    word-wrap: none;
+}
+
+.admit form button {
+    background: #c9e6ff;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.admit form button:hover,
+.admit form button:focus {
+    background: #92bde7;
+    color: rgb(95, 76, 76);
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
+
+.alert {
+    text-align: center;
+    padding: 10px;
+    background: #79c879;
+    color: #fff;
+    margin-bottom: 10px;
+    display: none;
+}
+
+
+/* LARGE SCREENS */
+
+@media(min-width:900px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .wrapper>* {
+        padding: 2em;
+    }
+    .info h3,
+    .info ul,
+    .brand {
+        text-align: center;
+    }
+}

@@ -1,0 +1,91 @@
+
+
+.row {
+    margin-bottom: 15px;
+}
+
+.container button {
+    margin-top: 10px;
+    padding: 8px 12px;
+
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 100%;
+    border: 1px solid #c9e6ff;
+}
+
+.container button:hover,
+.container button:focus {
+    background: #92bde7;
+    color: rgb(95, 76, 76);
+    outline: 2;
+    transition: background-color 2s ease-out;
+}
+
+.container .form-control {
+    height: 55px;
+    border: 1px solid rgba(156, 33, 33, 0.4);
+    background: none;
+    border-radius: 10px;
+    width: 100%;
+    background: rgba(214, 224, 154, 0.2);
+    line-height: 1;
+}
+
+a {
+    color: white;
+}
+
+.footer a:hover, .footer a:focus{
+    color: wheat;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    width: 90%;
+}
+
+  
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 10px;
+    
+}
+.vertical-center {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    /* align the inline(-block) elements horizontally */
+    font: 0/0 a;
+    /* remove the gap between inline(-block) elements */
+}
+
+.vertical-center:before {
+    /* create a full-height inline block pseudo=element */
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    /* vertical alignment of the inline element */
+    height: 100%;
+}
+
+.vertical-center>.container {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    /* vertical alignment of the inline element */
+    font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* <-- reset the font property */
+}
