@@ -2,6 +2,7 @@
 var firebaseConfig = {
     apiKey: "AIzaSyBVAy3D7a2Zh2d5jA6Hdc4ZTPW4bdsOOmk",
     authDomain: "adm-sys9.firebaseapp.com",
+    storageBucket: "adm-sys9.appspot.com",
     projectId: "adm-sys9",
     appId: "1:932887972109:web:f237eee9b600dd5dc80844",
 };
