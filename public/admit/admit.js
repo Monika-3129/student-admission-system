@@ -339,3 +339,29 @@ function submitForm(e) {
 
     // });
 }
+
+document.getElementById('feedForm').addEventListener('submit', sendFeed);
+
+function sendFeed(e){
+    e.preventDefault();
+    const user = auth.currentUser;
+    var msg = getInputVal('feedbackMsg');
+    var uip = document.getElementById("uip").innerText;
+    db.collection("feedBackWeb").doc(user.uid).set({
+        sentOn:new Date(),
+        medium:"web",
+        msg:msg,
+        ip:uip,
+        phone:user.phoneNumber
+    })
+        .then(() => {
+            console.log("Feedback successfully saved!");
+            document.getElementById('feedForm').reset();
+            $('#feedbackModal').modal('hide');
+
+        })
+        .catch((error) => {
+            console.error("Error saving Feedback: ", error);
+        });
+
+}

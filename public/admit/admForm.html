@@ -7,16 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Student Admission Form</title>
     <!-- CSS -->
-    
+
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
     <!-- JS and JQs -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <!-- Getting IP of USER -->
     <script>
         $.getJSON("https://api.ipify.org?format=json",
@@ -62,20 +62,26 @@
 
 
             <ul class="navbar-nav ml-auto flex-column-reverse flex-md-row">
-                <li class="nav-item"><a class="nav-link" href="#" data-toggle="tooltip"
-                        title="Fill a form for any help regarding admission form">Help</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" data-toggle="tooltip"
-                        title="Get contact details!">Contacts</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" data-toggle="tooltip"
-                        title="Send us your feedbacks!">Feedback</a></li>
+
+                <button id="uip" class="btn btn-info btn-lg nav-item " data-toggle="tooltip"
+                    title="Your Current IP Address!"></button> &nbsp;
+
+                
+                    <a class="btn btn-success btn-lg nav-item " href="https://vinaysaurabh.web.app/" target="_blank"
+                        data-toggle="tooltip" title="Get developer details!"><i class="fa fa-user"></i>
+                        Developer </a>
+                &nbsp;
 
 
+                <button class="btn btn-primary btn-lg nav-item " data-toggle="modal" data-target="#feedbackModal"
+                    title="Send us your feedbacks!"><i class="fa fa-comments"></i> Feedback</button> &nbsp;
+
+
+                <button onclick="onSignOutClick()" class="btn btn-danger btn-lg nav-item" data-toggle="tooltip"
+                    title="Logout from your dashboard"><i class="fa fa-power-off"></i> Logout </button>
             </ul>
 
-            <button id="uip" class="btn btn-info btn-lg nav-item " data-toggle="tooltip"
-                title="Your Current IP Address!"></button> &nbsp;
-            <button onclick="onSignOutClick()" class="btn btn-danger btn-lg nav-item" data-toggle="tooltip"
-                title="Logout from your dashboard"><i class="fa fa-power-off"></i> Logout </button>
+
         </div>
 
     </nav>
@@ -90,10 +96,7 @@
                     <span class="step"></span>
                     <span class="step"></span>
                     <span class="step"></span>
-
                 </div>
-
-                
 
                 <div class="tab">
                     <hr>
@@ -102,11 +105,11 @@
                     </h2>
                     <hr>
                     <div class="row">
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Name *</label>
                             <input type="text" placeholder="Name" class="form-control" name="name" id="name" required>
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Date of Birth *</label>
                             <input type="date" placeholder="Date Of Birth" class="form-control" id="birthday"
                                 name="birthday">
@@ -115,7 +118,7 @@
                     <!-- Row 2 -->
                     <div class="row">
 
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label for="gender">Gender *</label>
                             <select id="gender" class="form-control" name="gender">
                                 <option value="Male" selected>Male</option>
@@ -123,7 +126,7 @@
                                 <option value="Others">Others</option>
                             </select>
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label for="category">Category *</label>
                             <select id="category" class="form-control" name="category">
                                 <option value="General" selected>General</option>
@@ -133,7 +136,7 @@
                                 <option value="ST">ST</option>
                             </select>
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label for="bldGrp">Blood Group</label>
                             <select id="bldGrp" class="form-control" name="bldGrp">
                                 <option value="b+" selected>B +</option>
@@ -147,7 +150,7 @@
                                 <option value="na">Not Tested</option>
                             </select>
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label for="marSt">Marital Status *</label>
                             <select id="marSt" class="form-control" name="marSt">
                                 <option value="unmarried" selected>Un-Married</option>
@@ -159,44 +162,44 @@
 
                     <!-- Row 3 -->
                     <div class="row">
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Email Address *</label>
                             <input type="email" placeholder="example@gtc.com" class="form-control" name="email"
                                 id="email">
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Phone Number *</label>
                             <input type="number" placeholder="8684000920" class="form-control" name="phone" id="phone"
                                 readonly style="background-color: burlywood;">
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Aadhar no. *</label>
                             <input type="number" placeholder="0000 1111 2222" class="form-control" name="aadhar"
                                 id="aadhar">
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Nationality *</label>
                             <input type="text" placeholder="Indian" class="form-control" name="nation" id="nation">
                         </div>
                     </div>
                     <!-- Row 4 -->
                     <div class="row">
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Father's Name *</label>
                             <input type="text" placeholder="Mr. Ajay Kumar Dhillon" class="form-control" name="father"
                                 id="father">
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Father's Number *</label>
                             <input type="number" placeholder="8684000920" class="form-control" name="fPhone"
                                 id="fPhone">
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Mother's Name</label>
                             <input type="text" placeholder="Smt. Priyanka Dhillon" class="form-control" name="mother"
                                 id="mother">
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Mother's Number *</label>
                             <input type="number" placeholder="8684000920" class="form-control" name="mPhone"
                                 id="mPhone">
@@ -204,21 +207,21 @@
                     </div>
                     <!-- Row 5 -->
                     <div class="row">
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Father's Profession *</label>
                             <input type="text" placeholder="Business Man" class="form-control" name="prFather"
                                 id="prFather">
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Mother's Profession *</label>
                             <input type="text" placeholder="Indian Air Force Pilot" class="form-control" name="prMom"
                                 id="prMom">
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Family's Annual Income</label>
                             <input type="number" placeholder="1000000" class="form-control" name="income" id="income">
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Family ID (Parivar Pehchan Patra)</label>
                             <input type="text" placeholder="Enter Ration Card details" class="form-control"
                                 name="familyID" id="familyID">
@@ -227,18 +230,18 @@
 
                     <!-- Row 6 -->
                     <div class="row">
-                        <div class="col-lg-4 col-sm-11">
+                        <div class="col-lg-4 col-sm-12">
                             <label>Local Guardian's Name *</label>
                             <input type="text" placeholder="Mr. Aman Kumar Singh" class="form-control" name="lgName"
                                 id="lgName">
                         </div>
 
-                        <div class="col-lg-4 col-sm-11">
+                        <div class="col-lg-4 col-sm-12">
                             <label>Local Guardian's Phone *</label>
                             <input type="number" placeholder="8684000920" class="form-control" name="lgPhone"
                                 id="lgPhone">
                         </div>
-                        <div class="col-lg-4 col-sm-11">
+                        <div class="col-lg-4 col-sm-12">
                             <label>Local / Correspondence Address *</label>
                             <textarea name="lgAddress" class="form-control" id="lgAddress"
                                 placeholder="house no./ ward no./floor/ flat no./ street name/ village name/ district name "
@@ -249,7 +252,7 @@
 
                     <!-- Row 7 -->
                     <div class="row">
-                        <div class="col-lg-4 col-sm-11">
+                        <div class="col-lg-4 col-sm-12">
                             <label>State *</label>
                             <select name="state" id="state" class="form-control">
                                 <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -292,12 +295,12 @@
                                 <option value="West Bengal">West Bengal</option>
                             </select>
                         </div>
-                        <div class="col-lg-4 col-sm-11">
+                        <div class="col-lg-4 col-sm-12">
                             <label>PINCODE *</label>
                             <input type="number" name="pincode" class="form-control" placeholder="124507"
                                 id="pincode"></input>
                         </div>
-                        <div class="col-lg-4 col-sm-11">
+                        <div class="col-lg-4 col-sm-12">
                             <label>Permanent Address *</label>
                             <textarea name="address" class="form-control" id="pAddress"
                                 placeholder="house no./ ward no./floor/ flat no./ street name/ village name/ district name "
@@ -333,7 +336,7 @@
                                             placeholder="BPS"></td>
                                     <td><input type="text" class="form-control" name="board10" id="board10"
                                             placeholder="CBSE"></td>
-                                    <td><input type="number" class="form-control" name="roll10" id="roll10"
+                                    <td><input type="text" class="form-control" name="roll10" id="roll10"
                                             placeholder="Roll No."></td>
                                     <td><input type="number" class="form-control" name="year10" id="year10"
                                             placeholder="2014"></td>
@@ -381,7 +384,7 @@
                                             placeholder="XYZ Institute"></td>
                                     <td><input type="text" class="form-control" name="boardIti" id="boardIti"
                                             placeholder="Private"></td>
-                                    <td><input type="number" class="form-control" name="rollIti" id="rollIti"
+                                    <td><input type="text" class="form-control" name="rollIti" id="rollIti"
                                             placeholder="Roll No."></td>
                                     <td><input type="number" class="form-control" name="yearIti" id="yearIti"
                                             placeholder="2018"></td>
@@ -393,14 +396,13 @@
                                             placeholder="98"></td>
                                 </tr>
 
-
                                 <tr>
                                     <td>Diploma<br></td>
                                     <td><input type="text" class="form-control" name="schDip" id="schDip"
                                             placeholder="GTC SDE"></td>
                                     <td><input type="text" class="form-control" name="boardDip" id="boardDip"
                                             placeholder="HSBTE"></td>
-                                    <td><input type="number" class="form-control" name="rollDip" id="rollDip"
+                                    <td><input type="text" class="form-control" name="rollDip" id="rollDip"
                                             placeholder="Roll No."></td>
                                     <td><input type="number" class="form-control" name="yearDip" id="yearDip"
                                             placeholder="2020"></td>
@@ -417,7 +419,7 @@
                                             placeholder="GTC SET"></td>
                                     <td><input type="text" class="form-control" name="boardGrad" id="boardGrad"
                                             placeholder="MDU"></td>
-                                    <td><input type="number" class="form-control" name="rollGrad" id="rollGrad"
+                                    <td><input type="text" class="form-control" name="rollGrad" id="rollGrad"
                                             placeholder="Roll No."></td>
                                     <td><input type="number" class="form-control" name="yearGrad" id="yearGrad"
                                             placeholder="2021"></td>
@@ -435,7 +437,7 @@
                                             placeholder="GTC SET"></td>
                                     <td><input type="text" class="form-control" name="boardPG" id="boardPG"
                                             placeholder="MDU"></td>
-                                    <td><input type="number" class="form-control" name="rollPG" id="rollPG"
+                                    <td><input type="text" class="form-control" name="rollPG" id="rollPG"
                                             placeholder="Roll No."></td>
                                     <td><input type="number" class="form-control" name="yearPG" id="yearPG"
                                             placeholder="2021"></td>
@@ -459,21 +461,21 @@
                     <hr>
                     <!-- Row 5 -->
                     <div class="row">
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Competitive Exams</label>
                             <input type="text" placeholder="IIT-JEE / MAT / CAT / NATA / GATE" class="form-control"
                                 name="compExam" id="compExam">
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Rank</label>
                             <input type="number" placeholder="Rank Obtained" class="form-control" name="rank" id="rank">
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Co-curricular Activities</label>
                             <input type="text" name="cocurr" class="form-control"
                                 placeholder="Sudoku / Debate / Painting / Dancing / Singing" id="cocurr">
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Games And Sports</label>
                             <input type="text" name="games" class="form-control"
                                 placeholder="Cricket/ Volleyball/ Football/Running/ Jumping/ Kabbadi" id="games">
@@ -481,7 +483,7 @@
                     </div>
                     <!-- Row 6 -->
                     <div class="row">
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Course Applying for *</label>
                             <select id="departmentn" name="departmentn" onchange="populate4(this.id,'program')"
                                 class="form-control">
@@ -494,20 +496,20 @@
                                 <option value="Vocational">B.Vocational</option>
                             </select>
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Select Desired Program *</label>
                             <select id="program" name="program" onchange="populate(this.id,'stream')"
                                 class="form-control">
                                 <option disabled>Select Course First</option>
                             </select>
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Select Desired Stream *</label>
                             <select id="stream" name="stream" class="form-control">
                                 <option disabled>Select Program First</option>
                             </select>
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Accomodation Needed ? *</label>
                             <select id="hostel" name="hostel" onchange="populate3(this.id,'transp')"
                                 class="form-control">
@@ -520,42 +522,42 @@
                     </div>
                     <!-- Row 7 -->
                     <div class="row">
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Do you need Transportation ? *</label>
                             <select id="transp" name="transp" onchange="populate2(this.id,'route')"
                                 class="form-control">
-                                <option disabled>--Select Choice Of Hostel First--</option>
+                                <option disabled>Select Choice Of Hostel First</option>
                             </select>
                         </div>
-                        <div class="col-lg-3 col-sm-11">
+                        <div class="col-lg-3 col-sm-12">
                             <label>Select the source of Bus</label>
                             <select id="route" name="route" class="form-control">
-                                <option disabled>--Select Choice Of Transport First--</option>
+                                <option disabled>Select Choice Of Transport First</option>
 
                             </select>
                         </div>
-                        <div class="col-lg-6 col-sm-11">
+                        <div class="col-lg-6 col-sm-12">
                             <label>How did you learn about this institution</label>
                             <div class="button-group">
                                 <button type="button" class="form-control btn btn-default dropdown-toggle"
                                     data-toggle="dropdown" id="medSel">Select
                                     <span class="caret"></span></button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" class="small" data-value="newspaper" tabIndex="-1"><input
+                                    <li><a href="#" class="small" data-value="Newspaper" tabIndex="-1"><input
                                                 type="checkbox" />&nbsp;Newspaper and
                                             Advertisements</a></li>
-                                    <li><a href="#" class="small" data-value="eduFair" tabIndex="-1"><input
+                                    <li><a href="#" class="small" data-value="Education Fair" tabIndex="-1"><input
                                                 type="checkbox" />&nbsp;Education Fair</a></li>
-                                    <li><a href="#" class="small" data-value="ggiWebsite" tabIndex="-1"><input
+                                    <li><a href="#" class="small" data-value="GGI Website" tabIndex="-1"><input
                                                 type="checkbox" />&nbsp;GGI Website</a>
                                     </li>
-                                    <li><a href="#" class="small" data-value="eduPortal" tabIndex="-1"><input
+                                    <li><a href="#" class="small" data-value="Educational Portals" tabIndex="-1"><input
                                                 type="checkbox" />&nbsp;Educational
                                             Portals</a></li>
-                                    <li><a href="#" class="small" data-value="peers" tabIndex="-1"><input
+                                    <li><a href="#" class="small" data-value="Friends and Family" tabIndex="-1"><input
                                                 type="checkbox" />&nbsp;Friends and Family</a></li>
-                                    <li><a href="#" class="small" data-value="others" tabIndex="-1"><input
-                                                type="checkbox" />&nbsp;Other Sources 6</a></li>
+                                    <li><a href="#" class="small" data-value="Other Sources" tabIndex="-1"><input
+                                                type="checkbox" />&nbsp;Other Sources</a></li>
                                 </ul>
                                 <p id="mediums" hidden></p>
                             </div>
@@ -594,18 +596,20 @@
                                     <th>Instructions</th>
                                     <th>Choose Files</th>
                                     <th>Status</th>
-                                    
+
                                 </tr>
                                 <tr>
                                     <td>Student Photograph *</td>
                                     <td>Upload your recent passport size photo</td>
                                     <td>
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="photo" accept=".jpg, .jpeg">
+                                            <input type="file" class="custom-file-input" id="photo"
+                                                accept=".jpg, .jpeg">
                                             <label class="custom-file-label" for="photo">Choose file</label>
-                                          </div>
-                                        </td>
-                                    <td><label class="custom-file-status" for="photo" id="photoS">Not Selected</label></td>
+                                        </div>
+                                    </td>
+                                    <td><label class="custom-file-status" for="photo" id="photoS">Not Selected</label>
+                                    </td>
                                     <p hidden id="photoUrl"></p>
 
                                 </tr>
@@ -617,13 +621,14 @@
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="sign" accept=".jpg, .jpeg">
                                             <label class="custom-file-label" for="sign">Choose file</label>
-                                          </div>
-                                        </td>
-                                    <td><label class="custom-file-status" for="sign" id="signS">Not Selected</label></td>
+                                        </div>
+                                    </td>
+                                    <td><label class="custom-file-status" for="sign" id="signS">Not Selected</label>
+                                    </td>
                                     <p hidden id="signUrl"></p>
                                 </tr>
-                              
-                                
+
+
                             </table>
                         </div>
                     </div>
@@ -632,7 +637,8 @@
                         <div class="col-sm-12 col-lg-12 col-md-12">
 
                             <b>
-                                *** After Selecting the files for uploading, please wait for status to go to <b>100 %</b> and then press the <b>Submit</b> Button.
+                                *** After Selecting the files for uploading, please wait for status to go to <b>100
+                                    %</b> and then press the <b>Submit</b> Button.
                             </b>
                         </div>
 
@@ -651,7 +657,7 @@
     </div>
 
     <div id="anLoader" style="display: none;">
-        <h1 align="center" >Saving Your Form</h1>
+        <h1 align="center">Saving Your Form</h1>
         <h2 align="center">Please Wait</h2>
         <div class="rainbow-marker-loader mx-auto"></div>
     </div>
@@ -659,66 +665,114 @@
     <div id="processing" style="display: block;">
         <h1 align="center" id="n1">Checking Your Status </h1>
         <h2 align="center" id="n2">Please wait until we are fininshed</h2>
-        <svg class="bodySVG" id="bodySVG" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="bodySVG" id="bodySVG" width="64" height="64" viewBox="0 0 64 64" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <g id="study">
-            <rect width="64" height="64"/>
-            <g id="smoke">
-            <path id="smoke-2" d="M9 21L9.55279 19.8944C9.83431 19.3314 9.83431 18.6686 9.55279 18.1056L9 17L8.44721 15.8944C8.16569 15.3314 8.16569 14.6686 8.44721 14.1056L9 13" stroke="#797270"/>
-            <path id="smoke-1" d="M6.5 22L7.05279 20.8944C7.33431 20.3314 7.33431 19.6686 7.05279 19.1056L6.5 18L5.94721 16.8944C5.66569 16.3314 5.66569 15.6686 5.94721 15.1056L6.5 14" stroke="#797270"/>
+                <rect width="64" height="64" />
+                <g id="smoke">
+                    <path id="smoke-2"
+                        d="M9 21L9.55279 19.8944C9.83431 19.3314 9.83431 18.6686 9.55279 18.1056L9 17L8.44721 15.8944C8.16569 15.3314 8.16569 14.6686 8.44721 14.1056L9 13"
+                        stroke="#797270" />
+                    <path id="smoke-1"
+                        d="M6.5 22L7.05279 20.8944C7.33431 20.3314 7.33431 19.6686 7.05279 19.1056L6.5 18L5.94721 16.8944C5.66569 16.3314 5.66569 15.6686 5.94721 15.1056L6.5 14"
+                        stroke="#797270" />
+                </g>
+                <g id="laptop">
+                    <rect id="laptop-base" x="17" y="28" width="20" height="3" fill="#F3F3F3" stroke="#453F3C"
+                        stroke-width="2" />
+                    <rect id="laptop-screen" x="18" y="17" width="18" height="11" fill="#5A524E" stroke="#453F3C"
+                        stroke-width="2" />
+                    <rect id="line-1" x="20" y="19" width="14" height="1" fill="#F78764" />
+                    <rect id="line-2" x="20" y="21" width="14" height="1" fill="#F9AB82" />
+                    <rect id="line-3" x="20" y="23" width="14" height="1" fill="#F78764" />
+                    <rect id="line-4" x="20" y="25" width="14" height="1" fill="#F9AB82" />
+                </g>
+                <g id="cup">
+                    <rect id="Rectangle 978" x="5" y="24" width="5" height="7" fill="#CCC4C4" stroke="#453F3C"
+                        stroke-width="2" />
+                    <path id="Ellipse 416" d="M11 28C12.1046 28 13 27.1046 13 26C13 24.8954 12.1046 24 11 24"
+                        stroke="#453F3C" stroke-width="2" />
+                    <rect id="Rectangle 996" x="6" y="25" width="3" height="1" fill="#D6D2D1" />
+                </g>
+                <g id="books">
+                    <rect id="Rectangle 984" x="58" y="27" width="4" height="14" transform="rotate(90 58 27)"
+                        fill="#B16B4F" stroke="#453F3C" stroke-width="2" />
+                    <rect id="Rectangle 985" x="56" y="23" width="4" height="14" transform="rotate(90 56 23)"
+                        fill="#797270" stroke="#453F3C" stroke-width="2" />
+                    <rect id="Rectangle 986" x="60" y="19" width="4" height="14" transform="rotate(90 60 19)"
+                        fill="#F78764" stroke="#453F3C" stroke-width="2" />
+                    <rect id="Rectangle 993" x="47" y="20" width="12" height="1" fill="#F9AB82" />
+                    <rect id="Rectangle 994" x="43" y="24" width="12" height="1" fill="#54504E" />
+                    <rect id="Rectangle 995" x="45" y="28" width="12" height="1" fill="#804D39" />
+                </g>
+                <g id="desk">
+                    <rect id="Rectangle 973" x="4" y="31" width="56" height="5" fill="#797270" stroke="#453F3C"
+                        stroke-width="2" />
+                    <rect id="Rectangle 987" x="10" y="36" width="30" height="6" fill="#797270" stroke="#453F3C"
+                        stroke-width="2" />
+                    <rect id="Rectangle 975" x="6" y="36" width="4" height="24" fill="#797270" stroke="#453F3C"
+                        stroke-width="2" />
+                    <rect id="Rectangle 974" x="40" y="36" width="18" height="24" fill="#797270" stroke="#453F3C"
+                        stroke-width="2" />
+                    <line id="Line 129" x1="40" y1="48" x2="58" y2="48" stroke="#453F3C" stroke-width="2" />
+                    <line id="Line 130" x1="22" y1="39" x2="28" y2="39" stroke="#453F3C" stroke-width="2" />
+                    <line id="Line 142" x1="46" y1="42" x2="52" y2="42" stroke="#453F3C" stroke-width="2" />
+                    <line id="Line 131" x1="46" y1="54" x2="52" y2="54" stroke="#453F3C" stroke-width="2" />
+                    <rect id="Rectangle 988" x="11" y="37" width="28" height="1" fill="#54504E" />
+                    <rect id="Rectangle 992" x="5" y="32" width="54" height="1" fill="#9E9492" />
+                    <rect id="Rectangle 989" x="7" y="37" width="2" height="1" fill="#54504E" />
+                    <rect id="Rectangle 990" x="41" y="37" width="16" height="1" fill="#54504E" />
+                    <rect id="Rectangle 991" x="41" y="49" width="16" height="1" fill="#54504E" />
+                    <line id="Line 143" y1="60" x2="64" y2="60" stroke="#453F3C" stroke-width="2" />
+                </g>
             </g>
-            <g id="laptop">
-            <rect id="laptop-base" x="17" y="28" width="20" height="3" fill="#F3F3F3" stroke="#453F3C" stroke-width="2"/>
-            <rect id="laptop-screen" x="18" y="17" width="18" height="11" fill="#5A524E" stroke="#453F3C" stroke-width="2"/>
-            <rect id="line-1" x="20" y="19" width="14" height="1" fill="#F78764"/>
-            <rect id="line-2" x="20" y="21" width="14" height="1" fill="#F9AB82"/>
-            <rect id="line-3" x="20" y="23" width="14" height="1" fill="#F78764"/>
-            <rect id="line-4" x="20" y="25" width="14" height="1" fill="#F9AB82"/>
-            </g>
-            <g id="cup">
-            <rect id="Rectangle 978" x="5" y="24" width="5" height="7" fill="#CCC4C4" stroke="#453F3C" stroke-width="2"/>
-            <path id="Ellipse 416" d="M11 28C12.1046 28 13 27.1046 13 26C13 24.8954 12.1046 24 11 24" stroke="#453F3C" stroke-width="2"/>
-            <rect id="Rectangle 996" x="6" y="25" width="3" height="1" fill="#D6D2D1"/>
-            </g>
-            <g id="books">
-            <rect id="Rectangle 984" x="58" y="27" width="4" height="14" transform="rotate(90 58 27)" fill="#B16B4F" stroke="#453F3C" stroke-width="2"/>
-            <rect id="Rectangle 985" x="56" y="23" width="4" height="14" transform="rotate(90 56 23)" fill="#797270" stroke="#453F3C" stroke-width="2"/>
-            <rect id="Rectangle 986" x="60" y="19" width="4" height="14" transform="rotate(90 60 19)" fill="#F78764" stroke="#453F3C" stroke-width="2"/>
-            <rect id="Rectangle 993" x="47" y="20" width="12" height="1" fill="#F9AB82"/>
-            <rect id="Rectangle 994" x="43" y="24" width="12" height="1" fill="#54504E"/>
-            <rect id="Rectangle 995" x="45" y="28" width="12" height="1" fill="#804D39"/>
-            </g>
-            <g id="desk">
-            <rect id="Rectangle 973" x="4" y="31" width="56" height="5" fill="#797270" stroke="#453F3C" stroke-width="2"/>
-            <rect id="Rectangle 987" x="10" y="36" width="30" height="6" fill="#797270" stroke="#453F3C" stroke-width="2"/>
-            <rect id="Rectangle 975" x="6" y="36" width="4" height="24" fill="#797270" stroke="#453F3C" stroke-width="2"/>
-            <rect id="Rectangle 974" x="40" y="36" width="18" height="24" fill="#797270" stroke="#453F3C" stroke-width="2"/>
-            <line id="Line 129" x1="40" y1="48" x2="58" y2="48" stroke="#453F3C" stroke-width="2"/>
-            <line id="Line 130" x1="22" y1="39" x2="28" y2="39" stroke="#453F3C" stroke-width="2"/>
-            <line id="Line 142" x1="46" y1="42" x2="52" y2="42" stroke="#453F3C" stroke-width="2"/>
-            <line id="Line 131" x1="46" y1="54" x2="52" y2="54" stroke="#453F3C" stroke-width="2"/>
-            <rect id="Rectangle 988" x="11" y="37" width="28" height="1" fill="#54504E"/>
-            <rect id="Rectangle 992" x="5" y="32" width="54" height="1" fill="#9E9492"/>
-            <rect id="Rectangle 989" x="7" y="37" width="2" height="1" fill="#54504E"/>
-            <rect id="Rectangle 990" x="41" y="37" width="16" height="1" fill="#54504E"/>
-            <rect id="Rectangle 991" x="41" y="49" width="16" height="1" fill="#54504E"/>
-            <line id="Line 143" y1="60" x2="64" y2="60" stroke="#453F3C" stroke-width="2"/>
-            </g>
-            </g>
-            </svg>
+        </svg>
     </div>
 
-    <!-- Show Submitted Popup Here -->
+    <!-- Show feedback Popup Here -->
+    <!-- FeedBack Modal -->
+    <div class="modal fade feedbackModal" id="feedbackModal" role="dialog"
+        style="background-color:rgb(70, 70, 92);padding-top: 50px;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Send FeedBack / Grievances</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Main Modal Content Area -->
+                    <form id="feedForm" class="feedForm">
 
+                        <div class="form-group row">
 
-    <footer class="text-center text-white"
-        style="background-color: rgb(0, 0, 0); color: white;" id="ftr">
+                            <div class="form-group col-sm-12 col-lg-12"><br>
+                                <label for="feedbackMsg">Comments / Compliments</label>
+                                <textarea class="form-control" id="feedbackMsg"
+                                    placeholder="Enter Your Feedback"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-white" style="background-color: rgb(0, 0, 0); color: white; display: none;"
+        id="ftr">
 
         <div class="row">
             <div class="col-lg-4 col-sm-12 col-md-6">
-                <i class="fa fa-envelope mr-3"></i> <a style="color: white;" href="mailto:vinaysmh@gmail.com">vinaysmh@gmail.com</a>
+                <i class="fa fa-envelope mr-3"></i> <a style="color: white;"
+                    href="mailto:vinaysmh@gmail.com">vinaysmh@gmail.com</a>
             </div>
             <div class="col-lg-4 col-sm-12 col-md-6">
-                <i class="fa fa-globe mr-3"></i><a style="color: white;" href="https://vinaysaurabh.web.app"> Developer Portfolio </a>
+                <i class="fa fa-globe mr-3"></i><a style="color: white;" href="https://vinaysaurabh.web.app"> Developer
+                    Portfolio </a>
             </div>
             <div class="col-lg-4 col-sm-12 col-md-6">
                 <i class="fa fa-phone mr-3"></i><a style="color: white;" href="tel:+91 91555 34443">+91 91555 34443</a>
@@ -744,25 +798,25 @@
     <script src="../config.js"></script>
     <script src="admit.js"></script>
     <script>
-        
+
         // Add the following code if you want the name of the file appear on select
-        $(".custom-file-input").on("change", function() {
-          var fileName = $(this).val().split("\\").pop();
-          $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
         });
 
         const photoSel = document.getElementById("photo");
         const signSel = document.getElementById("sign");
 
         photoSel.addEventListener('change', (e) => {
-           uploadFiles(e.target.files[0],1);
+            uploadFiles(e.target.files[0], 1);
         });
 
         signSel.addEventListener('change', (e) => {
-            uploadFiles(e.target.files[0],2);
+            uploadFiles(e.target.files[0], 2);
         });
-      
-        </script>
+
+    </script>
 </body>
 
 </html>
