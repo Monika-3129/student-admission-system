@@ -208,8 +208,17 @@ auth.onAuthStateChanged(function (user) {
             var studentForm = db.collection("admitForm").doc(user.uid);
             studentForm.get().then((doc) => {
                 if (doc.exists) {
-                    document.getElementById("n1").innerText = "We have received your application";
+                    var pdf = doc.data().formPdf;
+                    if(pdf != null){
+                    document.getElementById("n3").style.display = "block";
+                    document.getElementById("n3").innerHTML = "<a href="+pdf+" target='_blank'>**Click to download**</a>";
+                    document.getElementById("n1").innerText = "We have Processed Your application";
+                    document.getElementById("n2").innerText = "You can now download your application Form";
+                    }
+                    else{
+                        document.getElementById("n1").innerText = "We have received your application";
                     document.getElementById("n2").innerText = "Please wait for further communication";
+                    }
                 } else {
                     document.getElementById("admit").style.display = "block";
                     document.getElementById("processing").style.display = "none";
