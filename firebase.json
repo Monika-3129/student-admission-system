@@ -1,9 +1,6 @@
 {
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  },
   "hosting": {
+    "site": "monika-osas",
     "public": "public",
     "ignore": [
       "firebase.json",

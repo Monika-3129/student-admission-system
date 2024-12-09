@@ -1,10 +1,12 @@
 //firebase app configs
 var firebaseConfig = {
-    apiKey: "AIzaSyBVAy3D7a2Zh2d5jA6Hdc4ZTPW4bdsOOmk",
+    apiKey: "AIzaSyB5j4xrLBKjKeHRM01-4tnKQKahGS9kG5o",
     authDomain: "adm-sys9.firebaseapp.com",
-    storageBucket: "adm-sys9.appspot.com",
     projectId: "adm-sys9",
-    appId: "1:932887972109:web:f237eee9b600dd5dc80844",
+    storageBucket: "adm-sys9.appspot.com",
+    messagingSenderId: "932887972109",
+    appId: "1:932887972109:web:6f71af3f4e40faf7c80844",
+    measurementId: "G-XLWFE1VYFD"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
