@@ -78,7 +78,7 @@ function saveInDb() {
         { 'name': "admitted", 'value': false },
         { 'name': "submitted", 'value': true },
         { 'name': "locked", 'value': false },
-        { 'name': "institute", 'value': "GTC" },
+        { 'name': "institute", 'value': "GITAM" },
         { 'name': "formPdf", 'value': null },
     );
 

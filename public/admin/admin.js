@@ -40,7 +40,7 @@ auth.onAuthStateChanged((user) => {
             logout();
         }
         else {
-            //window.location.replace('dashboard.html');
+            window.location.replace('dashboard.html');
         }
     } else {
         // User is signed out
